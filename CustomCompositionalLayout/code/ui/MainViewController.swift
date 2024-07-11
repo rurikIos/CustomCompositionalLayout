@@ -86,12 +86,36 @@ final class MainViewController: UIViewController, MainView {
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize, supplementaryItems: [])
         
-        let groupSize = NSCollectionLayoutSize(
+        let fullWidthGroupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .estimated(Dimens.inlineHeight_default)
         )
+        let halfWidthGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.5),
+            heightDimension: .estimated(Dimens.inlineHeight_default)
+        )
         
-        let groupLayout = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        // кассы
+        let boxOfficeGroupLayout = NSCollectionLayoutGroup.vertical(layoutSize: fullWidthGroupSize, subitems: [item])
+        // товары
+        let productsGroupLayout = NSCollectionLayoutGroup.vertical(layoutSize: fullWidthGroupSize, repeatingSubitem: item, count: 9)
+        // левый столбец
+        let groupLayout0 = NSCollectionLayoutGroup.vertical(
+            layoutSize: halfWidthGroupSize,
+            subitems: [boxOfficeGroupLayout, productsGroupLayout]
+        )
+        
+        // сотрудники
+        let employeeGroupLayout = NSCollectionLayoutGroup.vertical(layoutSize: fullWidthGroupSize, repeatingSubitem: item, count: 4)
+        // продажи
+        let saleGroupLayout = NSCollectionLayoutGroup.vertical(layoutSize: fullWidthGroupSize, repeatingSubitem: item, count: 5)
+        let groupLayout1 = NSCollectionLayoutGroup.vertical(
+            layoutSize: halfWidthGroupSize, 
+            subitems: [employeeGroupLayout, saleGroupLayout]
+        )
+        
+        let groupLayout = NSCollectionLayoutGroup.horizontal(layoutSize: fullWidthGroupSize, subitems: [groupLayout0, groupLayout1])
+        
         return groupLayout
     }
 }
