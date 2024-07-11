@@ -27,6 +27,11 @@
 		E23A16782C3E7358007A93D4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16772C3E7358007A93D4 /* ProductCell.swift */; };
 		E23A167A2C3E982E007A93D4 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16792C3E982E007A93D4 /* EmployeeCell.swift */; };
 		E23A167C2C3EAD38007A93D4 /* SaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A167B2C3EAD38007A93D4 /* SaleCell.swift */; };
+		E23A167E2C3FA245007A93D4 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A167D2C3FA245007A93D4 /* MainState.swift */; };
+		E23A16812C3FA26E007A93D4 /* BaseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16802C3FA26E007A93D4 /* BaseState.swift */; };
+		E23A16832C3FA3D5007A93D4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16822C3FA3D5007A93D4 /* BaseView.swift */; };
+		E23A16852C3FA418007A93D4 /* StateDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16842C3FA418007A93D4 /* StateDriver.swift */; };
+		E23A16872C3FA67C007A93D4 /* MainIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A16862C3FA67C007A93D4 /* MainIntent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		E23A16772C3E7358007A93D4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		E23A16792C3E982E007A93D4 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		E23A167B2C3EAD38007A93D4 /* SaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCell.swift; sourceTree = "<group>"; };
+		E23A167D2C3FA245007A93D4 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		E23A16802C3FA26E007A93D4 /* BaseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseState.swift; sourceTree = "<group>"; };
+		E23A16822C3FA3D5007A93D4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E23A16842C3FA418007A93D4 /* StateDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDriver.swift; sourceTree = "<group>"; };
+		E23A16862C3FA67C007A93D4 /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,7 @@
 		E23A165A2C3D45C4007A93D4 /* code */ = {
 			isa = PBXGroup;
 			children = (
+				E23A167F2C3FA260007A93D4 /* base */,
 				E23A16742C3E64FC007A93D4 /* utils */,
 				E23A16602C3D592F007A93D4 /* ui */,
 				E23A165F2C3D5921007A93D4 /* model */,
@@ -145,6 +156,7 @@
 				E23A166A2C3D607E007A93D4 /* EmployeeCellViewModel.swift */,
 				E23A166C2C3D613D007A93D4 /* SaleCellViewModel.swift */,
 				E23A166E2C3D61B0007A93D4 /* CameraCellViewModel.swift */,
+				E23A167D2C3FA245007A93D4 /* MainState.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 			children = (
 				E23A165D2C3D4629007A93D4 /* MainViewController.swift */,
 				E23A16612C3D594F007A93D4 /* cell */,
+				E23A16862C3FA67C007A93D4 /* MainIntent.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -176,6 +189,16 @@
 				E23A16752C3E650A007A93D4 /* Dimens.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		E23A167F2C3FA260007A93D4 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				E23A16802C3FA26E007A93D4 /* BaseState.swift */,
+				E23A16822C3FA3D5007A93D4 /* BaseView.swift */,
+				E23A16842C3FA418007A93D4 /* StateDriver.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +318,11 @@
 			files = (
 				E23A16632C3D5E9C007A93D4 /* CellViewModel.swift in Sources */,
 				E23A164A2C3D452D007A93D4 /* ViewController.swift in Sources */,
+				E23A16812C3FA26E007A93D4 /* BaseState.swift in Sources */,
 				E23A166B2C3D607E007A93D4 /* EmployeeCellViewModel.swift in Sources */,
+				E23A16872C3FA67C007A93D4 /* MainIntent.swift in Sources */,
 				E23A16732C3E6054007A93D4 /* BoxOfficeCell.swift in Sources */,
+				E23A167E2C3FA245007A93D4 /* MainState.swift in Sources */,
 				E23A166F2C3D61B0007A93D4 /* CameraCellViewModel.swift in Sources */,
 				E23A16782C3E7358007A93D4 /* ProductCell.swift in Sources */,
 				E23A16762C3E650A007A93D4 /* Dimens.swift in Sources */,
@@ -304,9 +330,11 @@
 				E23A16662C3D5FDA007A93D4 /* BoxOfficeCellViewModel.swift in Sources */,
 				E23A167A2C3E982E007A93D4 /* EmployeeCell.swift in Sources */,
 				E23A16462C3D452D007A93D4 /* AppDelegate.swift in Sources */,
+				E23A16852C3FA418007A93D4 /* StateDriver.swift in Sources */,
 				E23A166D2C3D613D007A93D4 /* SaleCellViewModel.swift in Sources */,
 				E23A16482C3D452D007A93D4 /* SceneDelegate.swift in Sources */,
 				E23A16712C3E58B5007A93D4 /* CameraCell.swift in Sources */,
+				E23A16832C3FA3D5007A93D4 /* BaseView.swift in Sources */,
 				E23A167C2C3EAD38007A93D4 /* SaleCell.swift in Sources */,
 				E23A165E2C3D4629007A93D4 /* MainViewController.swift in Sources */,
 			);

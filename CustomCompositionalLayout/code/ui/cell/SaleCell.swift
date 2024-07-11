@@ -21,7 +21,7 @@ final class SaleCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        [dateLabel, dateLabel, countLabel, costLabel].forEach { contentView.addSubview($0) }
+        [dateLabel, dayLabel, countLabel, costLabel].forEach { contentView.addSubview($0) }
         
         contentView.backgroundColor = .blue
     }
@@ -66,8 +66,7 @@ final class SaleCell: UICollectionViewCell {
         
         countLabel.pin
             .top(Dimens.offset_m)
-            .left(of: costLabel)
-            .marginRight(Dimens.offset_m)
+            .right(Constants.countRightMargin)
             .sizeToFit()
     }
 }

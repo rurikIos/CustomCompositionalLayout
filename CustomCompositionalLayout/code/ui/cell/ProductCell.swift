@@ -11,7 +11,7 @@ import PinLayout
 final class ProductCell: UICollectionViewCell {
     
     private struct Constants {
-        static let costWidth: CGFloat = 50
+        static let costWidth: CGFloat = 70
     }
     
     private let nameLabel = UILabel()
@@ -22,6 +22,8 @@ final class ProductCell: UICollectionViewCell {
         super.init(frame: frame)
         [nameLabel, countLabel, costLabel].forEach { contentView.addSubview($0) }
         contentView.backgroundColor = .yellow
+        
+        costLabel.textAlignment = .right
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +54,7 @@ final class ProductCell: UICollectionViewCell {
         
         countLabel.pin
             .top(Dimens.offset_m)
-            .right(Constants.costWidth + Dimens.offset_m)
+            .right(Constants.costWidth + Dimens.offset_m * 2)
             .sizeToFit()
         
         nameLabel.pin

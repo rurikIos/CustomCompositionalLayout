@@ -12,6 +12,7 @@ final class EmployeeCell: UICollectionViewCell {
     
     private struct Constants {
         static let photoSide: CGFloat = 50
+        static let checkNumberRightMargin: CGFloat = 100
     }
     
     private let photoImageView = UIImageView()
@@ -56,6 +57,7 @@ final class EmployeeCell: UICollectionViewCell {
         
         nameLabel.pin
             .right(of: photoImageView)
+            .marginLeft(Dimens.offset_s)
             .vCenter(to: photoImageView.edge.vCenter)
             .sizeToFit()
         
@@ -65,8 +67,7 @@ final class EmployeeCell: UICollectionViewCell {
             .sizeToFit()
         
         checkNumberLabel.pin
-            .left(of: costLabel)
-            .marginLeft(Dimens.offset_m)
+            .right(Constants.checkNumberRightMargin)
             .vCenter(to: photoImageView.edge.vCenter)
             .sizeToFit()
     }
